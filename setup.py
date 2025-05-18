@@ -3,11 +3,8 @@ from setuptools import setup
 APP = ['spoofer.py']
 OPTIONS = {
     'argv_emulation': True,
-    'includes': ['tkinterdnd2'],
-    'packages': ['PIL', 'numpy', 'piexif'],
-    'frameworks': ['/System/Library/Frameworks/Tk.framework', '/System/Library/Frameworks/Tcl.framework'],
+    'packages': ['PIL', 'numpy', 'piexif', 'tkinterdnd2'],
 }
-
 
 setup(
     app=APP,
