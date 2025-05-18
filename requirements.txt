@@ -1,0 +1,4 @@
+pillow
+numpy
+piexif
+tkinterdnd2
