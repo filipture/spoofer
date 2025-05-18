@@ -19,11 +19,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install pillow numpy piexif tkinterdnd2 py2app
-
-      - name: Generate setup.py
-        run: |
-          echo "from setuptools import setup\n\nAPP = ['spoofer.py']\nOPTIONS = {\n    'argv_emulation': True,\n    'packages': ['PIL', 'numpy', 'piexif', 'tkinterdnd2'],\n}\n\nsetup(\n    app=APP,\n    options={'py2app': OPTIONS},\n    setup_requires=['py2app'],\n)" > setup.py
+          pip install -r requirements.txt
+          pip install py2app
 
       - name: Build .app with py2app
         run: |
